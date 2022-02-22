@@ -340,7 +340,7 @@ class WordleApp(App):
                 self.reset()
             return
         if self.header.time_left <= 0:
-            self.message.content = "Time's up"
+            self.message.content = f"Time's up\nThe answer was:\n{self.solution}"
         else:
             self.message.content = ""
         if event.key in string.ascii_letters:
