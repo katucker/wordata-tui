@@ -45,7 +45,7 @@ INITIAL_STATS = {
     "current_streak": 0,
     "max_streak": 0,
 }
-TIME_LIMIT = 183
+TIME_LIMIT = 123
 ##SEED_DATE = datetime.datetime.combine(datetime.datetime(2021, 6, 19), datetime.time())
 ##STATS_JSON = Path(platformdirs.user_data_dir("wordle")) / ".stats.json"
 ##STATS_JSON.parent.mkdir(exist_ok=True, parents=True)
@@ -54,49 +54,6 @@ with BASE_DIR.joinpath("La.gz").open("rb") as laf, BASE_DIR.joinpath("Ta.gz").op
 ) as taf:
     La: list[str] = json.loads(gzip.decompress(laf.read()))
     Ta: list[str] = json.loads(gzip.decompress(taf.read()))
-
-# Override the La array with data-related words. It's only the words in the
-# La array that are picked as solutions.
-La = ["array",
-      "areas",
-      "chart",
-      "count",
-      "covid",
-      "datum",
-      "edges",
-      "empty",
-      "erase",
-      "error",
-      "field",
-      "focus",
-      "graph",
-      "group",
-      "index",
-      "label",
-      "lines",
-      "marks",
-      "model",
-      "mongo",
-      "nodes",
-      "nosql",
-      "pivot",
-      "plots",
-      "point",
-      "power",
-      "query",
-      "round",
-      "rules",
-      "scale",
-      "slice",
-      "slope",
-      "speak",
-      "store",
-      "table",
-      "trend",
-      "value",
-      "wedge",
-      "write"
-    ]
 
 T = TypeVar("T")
 
